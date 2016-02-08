@@ -89,9 +89,9 @@ DirectoryIndex index.php index.html index.htm
   # To redirect all users to access the site WITH the 'www.' prefix,
   # (http://example.com/... will be redirected to http://www.example.com/...)
   # uncomment the following:
-  # RewriteCond %{HTTP_HOST} .
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  RewriteCond %{HTTP_HOST} .
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
   #
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/... will be redirected to http://example.com/...)
@@ -118,6 +118,8 @@ DirectoryIndex index.php index.html index.htm
 
   # Instead of any of these, serve static html site from subdir.
   RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
+  # Specifically redirect last year page.
+  RewriteRule ^drupal-govcon-2015/(.*)$ /splash-page/$1 [R=301,L]
   # Don't loop anything targeting the actual mask directory, to allow
   # for linked scripts, stylesheets etc in the static HTML
   RewriteCond %{REQUEST_URI} !^/splash-page/
