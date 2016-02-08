@@ -119,7 +119,7 @@ DirectoryIndex index.php index.html index.htm
   # Instead of any of these, serve static html site from subdir.
   RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
   # Specifically redirect last year page.
-  RewriteRule ^drupal-govcon-2015/(.*)$ /splash-page/$1 [R=301,L]
+  RewriteRule /drupal-govcon-2015/(.*)$ /splash-page/$1 [R=301,L]
   # Don't loop anything targeting the actual mask directory, to allow
   # for linked scripts, stylesheets etc in the static HTML
   RewriteCond %{REQUEST_URI} !^/splash-page/
