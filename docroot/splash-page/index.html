@@ -22,7 +22,7 @@
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 		    zoom: 12,
-		    center: myLatLng
+		    //center: myLatLng
 		});
 
 		var contentString = '<div id="content" class="mappopup">'+
@@ -37,11 +37,13 @@
 		var marker = new google.maps.Marker({
 		    position: myLatLng,
 		    map: map,
-		    title: 'Hello World!'
+		    title: 'Natcher Center'
 		  });
 		marker.addListener('click', function(){
 			infoWindow.open(map, marker);
 		});
+		infoWindow.open(map,marker); // This opens the InfoWindow by default
+		map.setCenter(marker.getPosition()); // Takes the place of center in var map
 		}
     </script>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:900,900italic,700,700italic|Alegreya+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
