@@ -19,6 +19,7 @@
 
       function initMap() {
 		var myLatLng = {lat: 38.997604, lng: -77.099769};
+		var topLatLng = {lat: 39.025000, lng: -77.099769}; // Used to center map downward
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 		    zoom: 12,
@@ -37,11 +38,19 @@
 		var marker = new google.maps.Marker({
 		    position: myLatLng,
 		    map: map,
+		    icon: "images/GovCon_Marker.svg",
 		    title: 'Natcher Center'
 		  });
 		marker.addListener('click', function(){
 			infoWindow.open(map, marker);
 		});
+
+		// Below added to give space for infoWindow
+		var topMarker = new google.maps.Marker({
+		    position: topLatLng,
+		});
+
+
 		infoWindow.open(map,marker); // This opens the InfoWindow by default
 		map.setCenter(marker.getPosition()); // Takes the place of center in var map
 		}
