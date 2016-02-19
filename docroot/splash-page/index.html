@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Drupal GovCon 2016</title>
 	<link sizes="72x72" href="images/apple-touch-icon-precomposed-72x72.png" rel="apple-touch-icon-precomposed">
 	<meta content="on" http-equiv="cleartype">
@@ -19,10 +19,11 @@
 
       function initMap() {
 		var myLatLng = {lat: 38.997604, lng: -77.099769};
+		var topLatLng = {lat: 39.025000, lng: -77.099769}; // Used to center map downward
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 		    zoom: 12,
-		    center: myLatLng
+		    //center: myLatLng
 		});
 
 		var contentString = '<div id="content" class="mappopup">'+
@@ -37,11 +38,21 @@
 		var marker = new google.maps.Marker({
 		    position: myLatLng,
 		    map: map,
-		    title: 'Hello World!'
+		    icon: "images/GovCon_Marker.svg",
+		    title: 'Natcher Center'
 		  });
 		marker.addListener('click', function(){
 			infoWindow.open(map, marker);
 		});
+
+		// Below added to give space for infoWindow
+		var topMarker = new google.maps.Marker({
+		    position: topLatLng,
+		});
+
+
+		infoWindow.open(map,marker); // This opens the InfoWindow by default
+		map.setCenter(topMarker.getPosition()); // Takes the place of center in var map
 		}
     </script>
     <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:900,900italic,700,700italic|Alegreya+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -76,7 +87,7 @@
 	<h2 id="sponsorinfo">Sponsor</h2>
 	<p>Interested in sponsoring or exhibiting?<br/><a href="https://drive.google.com/file/d/0B2-uLEb-4yufMU1IbDd0RFpjRFpMbVl0VVdQSVdLeXlob05R/view?usp=drivesdk" class="bodybutton">Download Prospectus</a></p>
 	<h2 id="lodginginfo">Lodging & Travel</h2>
-	<p>Discounted conference hotel or travel packages can be booked through Yeego Travel. Mention code <strong>Drupal</strong> for special conference pricing.<br/><a href="http://www.yeegotravel.com" class="bodybutton">Book Travel</a></p>
+	<p>Discounted conference hotel or travel packages can be booked through Yeego Travel. Mention code <strong>Drupal</strong> for special conference pricing.<br/><a href="http://www.yeegotravel.com/drupalgovcon" class="bodybutton">Book Travel</a></p>
 </div> <!-- End Main Content -->
 </div> <!-- End Content Wrapper -->
 <div id="mapwrapper">
