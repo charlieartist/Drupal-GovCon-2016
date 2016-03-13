@@ -105,6 +105,17 @@ h4 + ol {
   margin-top: 0;
 }
 
+a:link,
+a:visited {
+	color: rgba(224,126,39,1);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(68,91,73,1);
+	text-decoration: underline;
+}
+
 /* Main Navigation Styling */
 nav ul {
 	padding-left: 0;
