@@ -241,6 +241,17 @@ a.bodybutton:hover {
 
 /* End Main Content Styling */
 
+/* Image Styling */
+img.speaker_img {
+	border: 6px solid rgba(68,91,73,1);
+	border-radius: 50%;
+	//float: right;
+	//margin: 0 0 0 1em;
+	margin: 0 auto;
+	display: block; /* To center for mobile */
+	text-align: center; /* To center for mobile */
+}
+
 
 /* Footer Styling */
 footer {
@@ -352,6 +363,13 @@ img.sm-icons:hover {
 			display: block;
 		}
 
+		img.speaker_img {
+			float: right;
+			margin: 0 0 0 1em;
+			display: inline; /* To center for mobile */
+			text-align: right; /* To center for mobile */
+		}	
+
 	}
 
 
@@ -388,6 +406,13 @@ img.sm-icons:hover {
 			width: 100%;
 			text-align: center;
 			display: block;
+		}
+
+		img.speaker_img {
+			float: right;
+			margin: 0 0 0 1em;
+			display: inline; /* To center for mobile */
+			text-align: right; /* To center for mobile */
 		}		
 
 	}
