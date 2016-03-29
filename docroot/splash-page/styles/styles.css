@@ -271,6 +271,7 @@ input#mc-embedded-subscribe.button {
 	border: 1px solid rgba(68,91,73,1);
 	background: rgba(255,255,255,0.75);
 	display: block;
+	width: 100%;
 }
 
 
@@ -403,6 +404,10 @@ img.sm-icons:hover {
 			margin: 0 0 0 1em;
 			display: inline; /* To center for mobile */
 			text-align: right; /* To center for mobile */
+		}
+
+		#mc_embed_signup_scroll input#mce-EMAIL.email {
+			width: 33%;
 		}	
 
 	}
@@ -448,6 +453,10 @@ img.sm-icons:hover {
 			margin: 0 0 0 1em;
 			display: inline; /* To center for mobile */
 			text-align: right; /* To center for mobile */
+		}	
+
+		#mc_embed_signup_scroll input#mce-EMAIL.email {
+			width: 33%;
 		}		
 
 	}
