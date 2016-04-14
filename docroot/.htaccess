@@ -117,16 +117,16 @@ DirectoryIndex index.php index.html index.htm
   # RewriteRule ^ index.php [L]
 
   # Instead of any of these, serve static html site from subdir.
-  RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
+ # RewriteCond %{HTTP_HOST} ^(www.|)(drupalgovcon|capitalcamp|drupalgovdays|drupalforgov|capitalcampandgovdays|capitalcamp.prod.acquia-sites)(.org|.com) [NC]
 
   # Specifically redirect last year page.
-  RewriteRule ^drupal-govcon-2015$ /splash-page/$1 [R=301,L]
+ # RewriteRule ^drupal-govcon-2015$ /splash-page/$1 [R=301,L]
   
   # Don't loop anything targeting the actual mask directory, to allow
   # for linked scripts, stylesheets etc in the static HTML
-  RewriteCond %{REQUEST_URI} !^/splash-page/
-  #Any requests that made it this far are served from the /static/ directory
-  RewriteRule ^(.*)$ /splash-page/$1 [PT]
+ # RewriteCond %{REQUEST_URI} !^/splash-page/
+ # #Any requests that made it this far are served from the /static/ directory
+ # RewriteRule ^(.*)$ /splash-page/$1 [PT]
 
   # Rules to correctly serve gzip compressed CSS and JS files.
   # Requires both mod_rewrite and mod_headers to be enabled.
