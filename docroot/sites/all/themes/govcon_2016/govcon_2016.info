@@ -19,6 +19,26 @@ stylesheets[all][] = css/govcon-2016.no-query.css
 scripts[] = js/govcon-2016.behaviors.js
 
 ; ========================================
+; Breakpoints
+; ========================================
+breakpoints[wide] = (min-width: 1220px)
+breakpoints[normal] = (min-width: 980px)
+breakpoints[narrow] = (min-width: 740px)
+breakpoints[mobile] = (min-width: 0px)
+
+; ========================================
+; Multipliers
+; ========================================
+multipliers[mobile][] = 1.5x
+multipliers[mobile][] = 2x
+multipliers[narrow][] = 1.5x
+multipliers[narrow][] = 2x
+multipliers[normal][] = 1.5x
+multipliers[normal][] = 2x
+multipliers[wide][] = 1.5x
+multipliers[wide][] = 2x
+
+; ========================================
 ; Regions
 ; ========================================
 regions[navigation] = Navigation
