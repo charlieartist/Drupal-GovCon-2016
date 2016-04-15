@@ -45,67 +45,94 @@ body {
 .navwrapper {
   background: #445b49; }
 
-/* line 66, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 65, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+.l-navigation {
+  background: none;
+  color: white;
+  font-family: 'Playfair Display SC', serif;
+  font-weight: 900;
+  font-size: 1.2em; }
+
+/* line 73, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .headerwrapper {
   background: #d2c3b3; }
 
-/* line 70, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 77, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-header {
   margin-bottom: 0; }
 
-/* line 79, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 86, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-branding {
   text-align: center; }
 
-/* line 83, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 90, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .site-logo img:hover {
   opacity: 0.5; }
 
-/* line 88, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 95, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .mainwrapper {
   background: #d2c3b3; }
 
-/* line 92, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 99, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-main {
   background: rgba(255, 255, 255, 0.6);
   margin-bottom: 0; }
 
-/* line 97, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 104, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-content {
   padding: 1em 0; }
 
-/* line 101, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 108, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .footerwrapper {
   background: rgba(8, 91, 73, 0.7); }
 
-/* line 105, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 112, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-footer {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.7); }
 
-/* line 110, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 117, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-footer a:link,
 .lfooter a:visited {
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none; }
 
-/* line 117, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 124, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-footer a:hover {
   color: white; }
 
-/* line 122, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+/* line 129, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
 .l-footer p {
   margin-top: 0; }
 
+/* line 133, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+.block--system-main-menu {
+  background: none; }
+
+/* line 137, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+.block--system-main-menu ul.menu {
+  background: none;
+  text-align: center; }
+
+/* line 142, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+.block--system-main-menu a:link,
+.block--system-main-menu a:visited {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8); }
+
+/* line 148, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+.block--system-main-menu a:hover {
+  color: white; }
+
 @media (min-width: 44em) {
-  /* line 132, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 157, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-header,
   .l-main,
   .l-footer {
     max-width: 1190px;
     max-width: 74.375rem; }
 
-  /* line 138, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 163, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-branding {
     width: 32.20339%;
     float: left;
@@ -114,7 +141,7 @@ body {
     float: left;
     margin-right: 1.69492%; }
 
-  /* line 142, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 167, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-region--header {
     width: 66.10169%;
     float: right;
@@ -123,18 +150,18 @@ body {
     float: left;
     margin-right: 1.69492%; }
 
-  /* line 146, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 171, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-region--navigation {
     clear: both; }
 
-  /* line 153, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 178, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-first .l-content,
   .has-sidebar-second .l-content,
   .has-two-sidebars .l-content {
     width: 66.10169%;
     float: left;
     margin-right: 1.69492%; }
-  /* line 156, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 181, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-first .l-region--sidebar-first,
   .has-sidebar-first .l-region--sidebar-second,
   .has-sidebar-second .l-region--sidebar-first,
@@ -144,20 +171,20 @@ body {
     width: 32.20339%;
     float: right;
     margin-right: 0; }
-  /* line 160, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 185, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-first .l-region--sidebar-second,
   .has-sidebar-second .l-region--sidebar-second,
   .has-two-sidebars .l-region--sidebar-second {
     clear: right; } }
 @media (min-width: 70em) {
-  /* line 167, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 192, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-header,
   .l-main,
   .l-footer {
     max-width: 1190px;
     max-width: 74.375rem; }
 
-  /* line 173, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 198, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-branding {
     width: 36.70886%;
     float: left;
@@ -166,7 +193,7 @@ body {
     float: left;
     margin-right: 1.26582%; }
 
-  /* line 177, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 202, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .l-region--header {
     width: 62.02532%;
     float: right;
@@ -175,45 +202,45 @@ body {
     float: left;
     margin-right: 1.26582%; }
 
-  /* line 183, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 208, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-first .l-content {
     width: 74.68354%;
     float: right;
     margin-right: 0; }
-  /* line 186, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 211, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-first .l-region--sidebar-first {
     width: 24.05063%;
     float: left;
     margin-right: 1.26582%; }
 
-  /* line 191, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 216, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-second .l-content {
     width: 74.68354%;
     float: left;
     margin-right: 1.26582%; }
-  /* line 194, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 219, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-sidebar-second .l-region--sidebar-second {
     width: 24.05063%;
     float: right;
     margin-right: 0;
     clear: none; }
 
-  /* line 201, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 226, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-two-sidebars .l-content {
     width: 49.36709%;
     float: left;
     margin-right: 1.26582%;
     margin-left: 25.31646%; }
-  /* line 205, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 230, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-two-sidebars .l-region--sidebar-first,
   .has-two-sidebars .l-region--sidebar-second {
     width: 24.05063%;
     float: left;
     margin-right: 1.26582%; }
-  /* line 209, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 234, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-two-sidebars .l-region--sidebar-first {
     margin-left: -75.94937%; }
-  /* line 212, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
+  /* line 237, ../../../sass/layouts/govcon-simple/govcon-simple.layout.scss */
   .has-two-sidebars .l-region--sidebar-second {
     float: right;
     margin-right: 0;
