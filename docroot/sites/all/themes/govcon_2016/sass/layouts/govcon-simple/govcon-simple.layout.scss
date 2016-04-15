@@ -41,9 +41,92 @@ $desk: 70em 16; // At 70em use 16 columns.
 }
 
 
+
+// Site Colors
+// rgba(4,75,118,1) // Blue
+// rgba(68,91,73,1) // Green
+// rgba(224,126,39,1) // Orange
+// rgba(210,195,179,1) // Tan
+// rgb(80,80,80) // Dark Gray
+
+
 body {
-  background: #f00;
+  background: rgba(210,195,179,1);
+  background: rgba(68,91,73,1);
+  color: rgb(80,80,80);
+  font-family: 'Alegreya Sans', sans-serif;
 }
+
+
+.navwrapper {
+  background: rgba(68,91,73,1);
+}
+
+
+.headerwrapper {
+  background: rgba(210,195,179,1);  
+}
+
+.l-header {
+  margin-bottom: 0;
+}
+
+
+.l-branding a.site-logo {
+
+}
+
+.l-branding {
+  text-align: center;
+}
+
+.site-logo img:hover {
+  opacity: 0.5;
+}
+
+
+.mainwrapper {
+  background: rgba(210,195,179,1);
+}
+
+.l-main {
+  background: rgba(255,255,255,0.6);
+  margin-bottom: 0;
+}
+
+.l-content {
+  padding: 1em 0;
+}
+
+.footerwrapper {
+  background: rgba(8,91,73,0.7);
+}
+
+.l-footer {
+  margin-bottom: 0;
+  color: rgba(255,255,255,0.7);
+}
+
+.l-footer a:link,
+.lfooter a:visited {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+
+}
+
+.l-footer a:hover {
+  color: rgba(255,255,255,1);
+
+}
+
+.l-footer p {
+  margin-top: 0;
+}
+
+
+
+
+// Breakpoint Styling Below
 
 @include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
   .l-header,
@@ -54,9 +137,11 @@ body {
 
   .l-branding {
     @include span-columns(4, 12); // Span 4 out of 12 columns.
+    @include span-columns(12, 12);
   }
   .l-region--header{
     @include span-columns(8 omega, 12); // Span the last (omega) 8 columns of 12.
+    @include span-columns(12,12);
   }
   .l-region--navigation {
     clear: both;
@@ -87,9 +172,11 @@ body {
 
   .l-branding {
     @include span-columns(6, 16); // Span 6 out of 16 columns.
+    @include span-columns(16,16);
   }
   .l-region--header{
     @include span-columns(10 omega, 16); // Span the last (omega) 10 columns of 16.
+    @include span-columns(16,16);
   }
 
   .has-sidebar-first {

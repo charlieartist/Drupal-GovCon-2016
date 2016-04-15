@@ -1,4 +1,11 @@
 <div<?php print $attributes; ?>>
+  <div class="navwrapper">
+  <div class="l-navigation">
+     <?php print render($page['navigation']); ?>
+    </div> <!-- End l-navigation div -->
+  </div> <!-- End navwrapper div -->
+
+<div class="headerwrapper">
   <header class="l-header" role="banner">
     <div class="l-branding">
       <?php if ($logo): ?>
@@ -21,9 +28,14 @@
     </div>
 
     <?php print render($page['header']); ?>
-    <?php print render($page['navigation']); ?>
   </header>
+</div> <!-- End Headerwrapper Div -->
 
+  <div class="l-banner">
+    <?php print render($page['banner']); ?>
+  </div> <!-- End Banner Div -->
+
+<div class="mainwrapper">
   <div class="l-main">
     <div class="l-content" role="main">
       <?php print render($page['highlighted']); ?>
@@ -47,8 +59,23 @@
     <?php print render($page['sidebar_first']); ?>
     <?php print render($page['sidebar_second']); ?>
   </div>
+</div> <!-- End mainwrapper div -->
 
+  <div class="lowerfirstwrapper">
+  <div class="l-lower-first">
+    <?php print render($page['lower_first']); ?>
+  </div> <!-- End First Lower Content Div -->
+</div> <!-- End First Lower Content Wrapper Div -->
+
+  <div class="lowersecondwrapper">
+  <div class="l-lower-second">
+    <?php print render($page['lower_second']); ?>
+  </div> <!-- End Second Lower Content Div -->
+  </div> <!-- End Second Lower Content Wrapper Div -->
+
+<div class="footerwrapper">
   <footer class="l-footer" role="contentinfo">
     <?php print render($page['footer']); ?>
   </footer>
+</div> <!-- End Footerwrapper div -->
 </div>
