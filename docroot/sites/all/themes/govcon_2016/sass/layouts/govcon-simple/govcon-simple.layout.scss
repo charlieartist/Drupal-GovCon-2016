@@ -131,6 +131,8 @@ body {
   margin-top: 0;
 }
 
+// Main Navigation Styling
+
 .pane-system-main-menu a:link,
 .pane-system-main-menu a:visited {
   text-decoration: none;
@@ -142,8 +144,16 @@ body {
 }
 
 .pane-system-main-menu ul.menu {
-  margin-top: 0;
+  margin-top: 0.5em;
   text-align: center;
+}
+
+.pane-system-main-menu li {
+  padding-top: 0.5em;
+}
+
+.l-region--navigation .menu li {
+  padding-top: 1em;
 }
 
 // Styling for Mean Menus
@@ -158,8 +168,9 @@ body {
 
 .mean-container div.mean-bar {
   background: rgba(68,91,73,1);
-  background: rgba(68,91,73,1) url(/sites/default/files/UXPA_horizlogo_rev.svg) 4% center no-repeat;
-  background: rgba(68,91,73,1) url(/sites/default/files/UXPA_horizlogo_rev.svg) 4% 0.75em no-repeat;
+  //background: rgba(68,91,73,1) url(/sites/default/files/govcon-wordmark-rev.svg) 4% center no-repeat;
+  background: rgba(68,91,73,1) url(/sites/default/files/govcon-wordmark-rev.svg) 4% 0.5em no-repeat;
+  background-size: 2.25em;
 }
 
 .mean-container div.mean-bar nav.mean-nav ul.menu li.first.leaf {
@@ -193,8 +204,21 @@ body {
   border-bottom: none;
 }
 
+// Footer Area Styling
+
+
+// End Footer Area Styling
+
 
 // Breakpoint Styling Below
+
+/* Clearfix hack */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 
 @include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
   .l-header,
