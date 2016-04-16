@@ -205,6 +205,25 @@ body {
   border-bottom: none;
 }
 
+
+// This element enables the home link for the site logo in mobile view
+.pane-block-5 {
+  //border: 1px solid #f00;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 10em;
+  height: 2.75em;
+  //z-index: 1000000;
+  z-index: 999999;
+}
+
+.header_link {
+  //background: rgba(255,0,0,0.2);
+  min-height: 3em;
+
+}
+
 // Footer Area Styling
 #footerleft,
 #footerright {
