@@ -54,6 +54,9 @@ $desk: 70em 16; // At 70em use 16 columns.
 body {
   background: rgba(210,195,179,1);
   background: rgba(68,91,73,1);
+  background: rgba(210,195,179,1) url(/sites/default/files/gc-wave-background-grad.svg) top no-repeat;
+  background-size: 100% auto;
+  padding: 0;
   color: rgb(80,80,80);
   font-family: 'Alegreya Sans', sans-serif;
   text-rendering: optimizeLegibility;
@@ -140,11 +143,12 @@ a.bodybutton:hover {
 }
 
 .headerwrapper {
-  background: rgba(210,195,179,1);  
+  //background: rgba(210,195,179,1);  
 }
 
 .l-header {
   margin-bottom: 0;
+  padding: 0;
 }
 
 
@@ -154,15 +158,26 @@ a.bodybutton:hover {
 
 .l-branding {
   text-align: center;
+  background: rgba(255,255,255,0.6);
+  //padding: 1em;
+}
+
+.panel-pane.pane-page-logo img {
+  width: 10em;
+  padding: 1em;
 }
 
 .panel-pane.pane-page-logo img:hover {
   opacity: 0.5;
 }
 
+.panel-pane.pane-page-logo {
+  //display: none; // Hides site logo in mobile view
+}
+
 
 .mainwrapper {
-  background: rgba(210,195,179,1);
+  //background: rgba(210,195,179,1);
 }
 
 .l-main {
