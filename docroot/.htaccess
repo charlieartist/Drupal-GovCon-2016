@@ -19,6 +19,7 @@ ErrorDocument 404 /index.php
 # Set the default handler.
 DirectoryIndex index.php index.html index.htm
 
+# Added in for temporary fix
 RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
