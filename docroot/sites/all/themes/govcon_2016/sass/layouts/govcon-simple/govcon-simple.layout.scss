@@ -162,6 +162,10 @@ a.bodybutton:hover {
   //padding: 1em;
 }
 
+.panel-pane.pane-page-logo {
+  display: none; // Hides site logo in mobile view
+}
+
 .panel-pane.pane-page-logo img {
   width: 10em;
   padding: 1em;
@@ -310,6 +314,71 @@ a.bodybutton:hover {
 
 }
 
+// Banner Image Area Styling
+.bannerimage {
+  //border: 1px solid #f00;
+  position: relative;
+}
+
+.view-banner-image picture img {
+  width: 100%;
+}
+
+.bannerimage .views-field.views-field-body .field-content {
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  left: 0;
+  margin: auto;
+  width: 75%;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 0 0 0.5em rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+.bannerimage .views-field.views-field-body .field-content a:link,
+.bannerimage .views-field.views-field-body .field-content a:visited {
+  color: rgba(255,255,255,1);
+  border: 2px solid rgba(243,112,33,1);
+  text-shadow: 0 0 0.5em rgba(0,0,0,0.9);
+  background: rgba(243,112,33,0.9);
+  border-radius: 0.25em;
+  padding: 0.25em;
+  font-size: 1.5em;
+  margin: 0.25em;
+  display: inline-block;
+}
+
+.bannerimage .views-field.views-field-body .field-content a:hover {
+  text-decoration: none;
+  border: 2px solid rgba(255,255,255,1);
+  background: rgba(0,91,131,1);
+}
+
+.bannerimage .views-field.views-field-body .field-content a:last-child {
+  margin-top: 0.5em;
+}
+
+.bannerimage h2 {
+  font-size: 15vw;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: rgba(255,255,255,1);
+}
+
+.bannerimage h3 {
+  font-size: 8vw;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,1);
+
+}
+// End Banner Image Area Styling
+
 // Footer Area Styling
 #footerleft,
 #footerright {
@@ -359,6 +428,14 @@ img.sm-icons:hover {
   }
 
 
+  // Site Logo Display
+  .panel-pane.pane-page-logo {
+    display: block; // Hides site logo in mobile view
+  }
+
+
+  // End Site Logo Display
+
   // Navigation Styling
     // This element enables the home link for the site logo in mobile view
   .pane-block-5 {
@@ -366,6 +443,23 @@ img.sm-icons:hover {
   }
 
   // End Navigation Styling
+
+  // Banner Area Styling
+    .bannerimage h2 {
+    font-size: 12vw;
+
+  }
+
+  .bannerimage h3 {
+    font-size: 7vw;
+
+  }
+
+  .bannerimage a:link {
+    margin: 0.5em;
+  }
+
+  // End Banner Area Styling
 
 
   // Footer Area Styling
@@ -427,6 +521,21 @@ img.sm-icons:hover {
   .l-footer {
     @include set-container-width; // Reset only the container width (elements have already been declared as containers).
   }
+
+
+  // Banner Image Styling
+    .bannerimage h2 {
+    font-size: 8vw;
+
+  }
+
+  .bannerimage h3 {
+    font-size: 3vw;
+    
+  }
+
+
+  // End Banner Image Styling
 
   .l-branding {
     @include span-columns(6, 16); // Span 6 out of 16 columns.
