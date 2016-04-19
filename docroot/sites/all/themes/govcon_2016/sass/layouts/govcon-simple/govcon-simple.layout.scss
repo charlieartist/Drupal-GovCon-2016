@@ -126,6 +126,7 @@ a.bodybutton:hover {
   background-color: rgba(68,91,73,1);
 
 }
+
 // End General Typogrpahy
 
 
@@ -198,7 +199,7 @@ a.bodybutton:hover {
 }
 
 .footerwrapper {
-  background: rgba(68,91,73,0.7);
+  background: rgba(68,91,73,1);
 }
 
 .l-footer {
@@ -322,6 +323,7 @@ a.bodybutton:hover {
 .bannerimage {
   //border: 1px solid #f00;
   position: relative;
+  margin-bottom: -0.5em;
 }
 
 .view-banner-image picture img {
@@ -381,6 +383,9 @@ a.bodybutton:hover {
   color: rgba(255,255,255,1);
 
 }
+
+
+
 // End Banner Image Area Styling
 
 // Footer Area Styling
