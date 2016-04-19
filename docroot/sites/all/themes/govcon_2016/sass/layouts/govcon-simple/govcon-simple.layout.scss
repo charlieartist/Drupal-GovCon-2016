@@ -366,10 +366,10 @@ a.bodybutton:hover {
 }
 
 .bannerimage h2 {
-  font-size: 15vw;
+  font-size: 12vw;
   margin-bottom: 0;
   font-weight: 400;
-  line-height: 0.8;
+  line-height: 0.9;
   text-transform: uppercase;
   color: rgba(255,255,255,1);
 }
@@ -419,6 +419,10 @@ img.sm-icons:hover {
 // End Footer Area Styling
 
 // Homepage Styling
+
+body.html.front .l-content {
+  padding: 1em 0;
+}
 
 #bannerintro {
   font-family: 'Playfair Display SC', serif;
@@ -474,6 +478,10 @@ img.sm-icons:hover {
 }
 
 
+body.html.front .panel-pane.pane-page-title,
+body.html.front .panelizer-view-mode.node.node-full.node-page.node-2 h2 {
+  display: none;
+}
 // End Homepage Styling
 
 
@@ -514,6 +522,11 @@ img.speaker_img {
   }
 
   // Homepage elements
+      body.html.front .l-content {
+        padding: 1em 0;
+      }
+
+
       img.speaker_img {
       float: right;
       margin: 0 0 0 1em;
@@ -627,6 +640,13 @@ img.speaker_img {
 
 
   // End Banner Image Styling
+
+  // Homepage Elements
+      body.html.front .l-content {
+      padding: 1em 10em;
+    }
+
+  // End Homepage Elements
 
   .l-branding {
     @include span-columns(6, 16); // Span 6 out of 16 columns.
