@@ -36,6 +36,9 @@ install:
   # Install proper version of node for front end tasks.
   - nvm install 4.3.2
   - nvm use 4.3.2
+  - npm install -g grunt
+  - npm install -g grunt-cli
+  - npm install -g bower
 
 before_script:
   # Clear drush release history cache, to pick up new releases.

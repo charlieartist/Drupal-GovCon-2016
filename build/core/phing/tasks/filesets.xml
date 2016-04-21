@@ -10,6 +10,7 @@
     <include name="**/*.theme"/>
     <exclude name="**/*.features.*"/>
     <exclude name="**/vendor/**/*"/>
+    <exclude name="**/govcon_2016/**/*"/>
   </patternset>
 
   <patternset id="files.frontend">
@@ -21,6 +22,7 @@
     <exclude name="**/bower_components/**/*"/>
     <exclude name="**/dist/**/*"/>
     <exclude name="**/styleguide/**/*"/>
+    <exclude name="**/govcon_2016/**/*"/>
   </patternset>
 
   <fileset dir="${repo.root}" id="files.php.all">
