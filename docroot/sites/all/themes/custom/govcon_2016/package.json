@@ -1,0 +1,25 @@
+{
+  "name": "govcon_2016",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "grunt-contrib-watch": "~0.4.3",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-shell": "~0.3.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "private": true,
+  "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
+  "scripts": {
+    "install-tools": "npm install; bundle install",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "uninstall-tools": "rm -r node_modules;",
+    "build": "grunt build",
+    "watch": "grunt watch"
+  }
+}
