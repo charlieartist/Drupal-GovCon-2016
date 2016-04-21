@@ -157,7 +157,7 @@ installed_extras:
   # - nodejs
   - pimpmylog
   # - redis
-  # - ruby
+  - ruby
   # - selenium
   # - solr
   - varnish
@@ -175,7 +175,7 @@ nodejs_npm_global_packages: []
 
 # `ruby` must be in installed_extras for this to work.
 ruby_install_gems_user: "{{ vagrant_user }}"
-ruby_install_gems: []
+ruby_install_gems: ['bundler']
 
 # You can configure almost anything else on the server in the rest of this file.
 extra_security_enabled: false
