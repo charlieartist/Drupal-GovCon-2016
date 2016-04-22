@@ -33,8 +33,9 @@ projects:
   # For all projects, always specify the exact version that is to be used.
   # For any project using a dev branch, always specify the revision id.
   cod:
-    type: profile
     version: '2.0-alpha6'
+    type: profile
+    subdir: ''
 
   acquia_purge:
     version: ~
@@ -61,7 +62,7 @@ projects:
   features:
     version: ~
   focal_point:
-    version: 1.0-beta6
+    version: '1.0-beta6'
   genpass:
     version: ~
   geofield:
@@ -81,7 +82,7 @@ projects:
   mailchimp:
     version: '4.0'
   media:
-    version: 2.0-beta1
+    version: '2.0-beta1'
   login_security:
     version: ~
   memcache:
@@ -89,7 +90,7 @@ projects:
   mollom:
     version: ~
   panels_everywhere:
-    version: 1.0-rc2
+    version: '1.0-rc2'
   paranoia:
     version: ~
   password_policy:
@@ -101,8 +102,8 @@ projects:
   responsive_menus:
     download:
       type: git
-      branch: "1.x-dev"
-      revision: "1d829b177e6bc2f4bd43c3cc6a4bd976e51ded2c"
+      branch: '1.x-dev'
+      revision: '1d829b177e6bc2f4bd43c3cc6a4bd976e51ded2c'
   seckit:
     version: ~
   security_review:
@@ -119,14 +120,17 @@ projects:
     version: ~
   views:
     version: ~
+
 libraries:
   leaflet:
-    type: library
-    url: https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip
+    download:
+      type: file
+      url: https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip
     directory_name: leaflet
   mailchimp:
-    type: library
-    url: https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.zip
+    download:
+      type: file
+      url: https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.zip
     directory_name: mailchimp
   ckeditor:
     download:

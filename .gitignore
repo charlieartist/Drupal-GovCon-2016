@@ -10,6 +10,7 @@ docroot/sites/*/private
 docroot/sites/*/*/contrib
 docroot/sites/*/libraries
 docroot/profiles/contrib
+docroot/profiles/cod
 
 # Ignore drupal core dirs
 /docroot/includes

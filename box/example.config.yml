@@ -22,7 +22,7 @@ vagrant_public_ip: ""
 vagrant_synced_folders:
   # The first synced folder will be used for the default Drupal installation, if
   # build_makefile: is 'true'.
-  - local_path: ../docroot
+  - local_path: ../
     destination: /var/www/drupalgovcon
     type: nfs
     create: true
@@ -46,7 +46,7 @@ install_site: false
 # Settings for building a Drupal site from a makefile (if 'build_makefile:'
 # is 'true').
 drupal_major_version: 7
-drupal_core_path: "/var/www/drupalgovcon"
+drupal_core_path: "/var/www/drupalgovcon/docroot"
 drupal_domain: "{{ vagrant_hostname }}"
 drupal_site_name: "Drupal GovCon"
 drupal_install_profile: cod
