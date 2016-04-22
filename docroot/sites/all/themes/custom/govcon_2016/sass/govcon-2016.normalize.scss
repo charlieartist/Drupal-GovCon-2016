@@ -1,8 +1,9 @@
 // Import the legacy variables (relevant for controlling compass-normalize).
-@import "variables/**/*";
+@import "variablesMap";
 
 // Generate normalize.css.
-@import "normalize";
+@import "../node_modules/normalize.css/normalize.css";
 
 // Use 'border-box' for the box model.
-@import "toolkit/kickstart";
+@import "../node_modules/sass-toolkit/stylesheets/toolkit/kickstart";
+

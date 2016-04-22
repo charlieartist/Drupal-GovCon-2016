@@ -104,7 +104,20 @@ module.exports = function (grunt) {
           }
         }]
       }
-    }
+    },
+    sass_globbing: {
+     theme_imports: {
+        files: {
+            'sass/_variablesMap.scss': 'sass/variables/**/*.scss',
+            'sass/_abstractionsMap.scss': 'sass/abstractions/**/*.scss',
+            'sass/_baseMap.scss': 'sass/base/**/*.scss',
+            'sass/_componentsMap.scss': 'sass/components/**/*.scss',
+          },
+      },
+      options: {
+          useSingleQuotes: false
+      }
+    },
   });
 
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -112,6 +125,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-shell');
+  grunt.loadNpmTasks('grunt-sass-globbing');
 
   grunt.registerTask('build', [
     'uglify:dist',

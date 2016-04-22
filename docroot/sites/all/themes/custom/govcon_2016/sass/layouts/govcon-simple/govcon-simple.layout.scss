@@ -4,8 +4,9 @@
  * Styling of the "simple" layout demonstrating the Compass grid extension Susy
  * and building mobile first layouts.
  ******************************************************************************/
-//@import "susy";
-@import "susyone"; // Needed to utilitze older syntax in Omega
+
+// Needed to utilitze older syntax
+@import '../node_modules/susy/sass/susyone';
 
 // Susy Variables
 
