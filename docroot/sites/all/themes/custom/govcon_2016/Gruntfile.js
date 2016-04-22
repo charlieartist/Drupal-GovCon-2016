@@ -40,9 +40,6 @@ module.exports = function (grunt) {
     },
 
     sass: {
-      options: {
-        sourceMap: true
-      },
       dist: {
         files: {
           'css/govcon-2016.normalize.css' : 'sass/govcon-2016.normalize.scss',
@@ -50,7 +47,24 @@ module.exports = function (grunt) {
           'css/govcon-2016.styles.css' : 'sass/govcon-2016.styles.scss',
           'css/govcon-2016.no-query.css' : 'sass/govcon-2016.no-query.scss',
           'css/layouts/govcon-simple/govcon-simple.layout.css' : 'sass/layouts/govcon-simple/govcon-simple.layout.scss'
-        }
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'compressed'
+        },
+      },
+      dev: {
+        files: {
+          'css/govcon-2016.normalize.css' : 'sass/govcon-2016.normalize.scss',
+          'css/govcon-2016.hacks.css' : 'sass/govcon-2016.hacks.scss',
+          'css/govcon-2016.styles.css' : 'sass/govcon-2016.styles.scss',
+          'css/govcon-2016.no-query.css' : 'sass/govcon-2016.no-query.scss',
+          'css/layouts/govcon-simple/govcon-simple.layout.css' : 'sass/layouts/govcon-simple/govcon-simple.layout.scss'
+        },
+        options: {
+          sourceMap: true,
+          outputStyle: 'expanded'
+        },
       }
     },
 
@@ -129,7 +143,7 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'uglify:dist',
     'jshint',
-    'sass'
+    'sass:dist'
   ]);
 
 };
