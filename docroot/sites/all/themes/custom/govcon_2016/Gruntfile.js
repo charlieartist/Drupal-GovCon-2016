@@ -9,7 +9,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['sass/{,**/}*.{scss,sass}'],
-        tasks: ['compass:dev'],
+        tasks: ['sass'],
         options: {
           livereload: false
         }
