@@ -5,10 +5,12 @@
  * and building mobile first layouts.
  ******************************************************************************/
 
-// Needed to utilitze older syntax
-@import '../node_modules/susy/sass/susyone';
+@import '../../../node_modules/susy/sass/susy';
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
 
 // Susy Variables
+ 
 
 // Set consistent vertical and horizontal spacing units.
 $vert-spacing-unit: 20px;
@@ -27,10 +29,21 @@ $container-width: 1200px;
 $tab: 44em 12; // At 44em use 12 columns.
 $desk: 70em 16; // At 70em use 16 columns.
 
+$susy: (
+  // the basics
+  columns: $total-columns,
+  gutters: $gutter-width / $column-width,
+  column-width: $column-width,
+
+  // advanced
+  container: $container-width,
+  math: if($container-style == magic, fluid, $container-style),
+);
+
 .l-header,
 .l-main,
 .l-footer {
-  @include container; // Define these elements as the grid containers.
+  @include container(); // Define these elements as the grid containers.
   margin-bottom: $vert-spacing-unit;
 }
 
@@ -509,11 +522,11 @@ img.speaker_img {
 
 // End Image Styling
 
-@include at-breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
+@include breakpoint($tab) { // At a given Susy Media Layout, use a given amount of columns.
   .l-header,
   .l-main,
   .l-footer {
-    @include set-container-width; // Reset only the container width (elements have already been declared as containers).
+    max-width: container(12); // Reset only the container width (elements have already been declared as containers).
   }
 
 
@@ -535,13 +548,13 @@ img.speaker_img {
       text-align: right; /* To center for mobile */
     }
 
-  // End HOmepage Elements
+  // End Homepage Elements
 
 
   // End Site Logo Display
 
   // Navigation Styling
-    // This element enables the home link for the site logo in mobile view
+  // This element enables the home link for the site logo in mobile view
   .pane-block-5 {
     display: none;
   }
@@ -549,9 +562,8 @@ img.speaker_img {
   // End Navigation Styling
 
   // Banner Area Styling
-    .bannerimage h2 {
+  .bannerimage h2 {
     font-size: 12vw;
-
   }
 
   .bannerimage h3 {
@@ -592,12 +604,12 @@ img.speaker_img {
 
 
   .l-branding {
-    @include span-columns(4, 12); // Span 4 out of 12 columns.
-    @include span-columns(12, 12);
+    @include span(4 of 12); // Span 4 out of 12 columns.
+    @include span(12 of 12);
   }
   .l-region--header{
-    @include span-columns(8 omega, 12); // Span the last (omega) 8 columns of 12.
-    @include span-columns(12,12);
+    @include span(8 of 12 last); // Span the last (omega) 8 columns of 12.
+    @include span(12 of 12);
   }
   .l-region--navigation {
     clear: both;
@@ -607,11 +619,11 @@ img.speaker_img {
   .has-sidebar-second,
   .has-two-sidebars {
     .l-content {
-      @include span-columns(8, 12); // Span 8 out of 12 columns.
+      @include span(8 of 12); // Span 8 out of 12 columns.
     }
     .l-region--sidebar-first,
     .l-region--sidebar-second {
-      @include span-columns(4 omega, 12); // Span the last (omega) 4 columns of 12.
+      @include span(4 of 12 last); // Span the last (omega) 4 columns of 12.
     }
     .l-region--sidebar-second {
       clear: right;
@@ -619,24 +631,23 @@ img.speaker_img {
   }
 }
 
-@include at-breakpoint($desk) {
+@include breakpoint($desk) {
   .l-header,
   .l-main,
   .l-footer {
-    @include set-container-width; // Reset only the container width (elements have already been declared as containers).
+    max-width: container(12); // Reset only the container width (elements have already been declared as containers).
   }
 
 
   // Banner Image Styling
-    .bannerimage h2 {
+  .bannerimage h2 {
     font-size: 8vw;
     font-size: 4vw;
 
   }
 
   .bannerimage h3 {
-    font-size: 3vw;
-    
+    font-size: 3vw;   
   }
 
 
@@ -650,46 +661,46 @@ img.speaker_img {
   // End Homepage Elements
 
   .l-branding {
-    @include span-columns(6, 16); // Span 6 out of 16 columns.
-    @include span-columns(16,16);
+    @include span(6 of 16); // Span 6 out of 16 columns.
+    @include span(16 of 16);
   }
   .l-region--header{
-    @include span-columns(10 omega, 16); // Span the last (omega) 10 columns of 16.
-    @include span-columns(16,16);
+    @include span(10 of 16 last); // Span the last (omega) 10 columns of 16.
+    @include span(16 of 16);
   }
 
   .has-sidebar-first {
     .l-content {
-      @include span-columns(12 omega, 16); // Span the last (omega) 12 columns of 16.
+      @include span(12 of 16 last); // Span the last (omega) 12 columns of 16.
     }
     .l-region--sidebar-first {
-      @include span-columns(4, 16); // Span 4 out of 16 columns.
+      @include span(4 of 16); // Span 4 out of 16 columns.
     }
   }
   .has-sidebar-second {
     .l-content {
-      @include span-columns(12, 16); // Span 12 out of 16 columns.
+      @include span(12 of 16); // Span 12 out of 16 columns.
     }
     .l-region--sidebar-second {
-      @include span-columns(4 omega, 16); // Span the last (omega) 4 columns of 16.
+      @include span(4 of 16 last); // Span the last (omega) 4 columns of 16.
       clear: none;
     }
   }
 
   .has-two-sidebars {
     .l-content {
-      @include span-columns(8, 16); // Span 8 out of 16 columns.
-      @include push(4, 16);  // Push element by adding 4 out of 16 columns of left margin.
+      @include span(8 of 16); // Span 8 out of 16 columns.
+      @include push(4 of 16);  // Push element by adding 4 out of 16 columns of left margin.
     }
     .l-region--sidebar-first,
     .l-region--sidebar-second {
-      @include span-columns(4, 16); // Span 4 out of 16 columns.
+      @include span(4 of 16); // Span 4 out of 16 columns.
     }
     .l-region--sidebar-first {
-      @include pull(12, 16); // Pull element by adding 12 out of 16 columns of negative left margin.
+      @include pull(12 of 16); // Pull element by adding 12 out of 16 columns of negative left margin.
     }
     .l-region--sidebar-second {
-      @include omega; // This element spans the last (omega) column.
+      @include last; // This element spans the last (omega) column.
       clear: none;
     }
   }

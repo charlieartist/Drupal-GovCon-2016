@@ -39,20 +39,17 @@ module.exports = function (grunt) {
       }
     },
 
-    compass: {
+    sass: {
       options: {
-        config: 'config.rb',
-        bundleExec: true,
-        force: true
-      },
-      dev: {
-        options: {
-          environment: 'development'
-        }
+        sourceMap: true
       },
       dist: {
-        options: {
-          environment: 'production'
+        files: {
+          'css/govcon-2016.normalize.css' : 'sass/govcon-2016.normalize.scss',
+          'css/govcon-2016.hacks.css' : 'sass/govcon-2016.hacks.scss',
+          'css/govcon-2016.styles.css' : 'sass/govcon-2016.styles.scss',
+          'css/govcon-2016.no-query.css' : 'sass/govcon-2016.no-query.scss',
+          'css/layouts/govcon-simple/govcon-simple.layout.css' : 'sass/layouts/govcon-simple/govcon-simple.layout.scss'
         }
       }
     },
@@ -105,6 +102,7 @@ module.exports = function (grunt) {
         }]
       }
     },
+
     sass_globbing: {
      theme_imports: {
         files: {
@@ -126,11 +124,12 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-sass-globbing');
+  grunt.loadNpmTasks('grunt-sass');
 
   grunt.registerTask('build', [
     'uglify:dist',
-    'compass:dist',
-    'jshint'
+    'jshint',
+    'sass'
   ]);
 
 };
