@@ -304,7 +304,7 @@ projects:
   features:
     type: module
     subdir: contrib
-    version: '2.8'
+    version: '2.10'
   fivestar:
     type: module
     subdir: contrib
