@@ -155,8 +155,8 @@ ruby_install_gems: ['bundler']
 # You can configure almost anything else on the server in the rest of this file.
 extra_security_enabled: false
 
-drush_version: "master"
-drush_keep_updated: true
+drush_version: "7.2.0"
+drush_keep_updated: false
 drush_composer_cli_options: "--prefer-dist --no-interaction"
 
 firewall_allowed_tcp_ports:
