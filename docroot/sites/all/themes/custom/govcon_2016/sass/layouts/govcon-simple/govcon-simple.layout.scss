@@ -240,22 +240,22 @@ a.bodybutton:hover {
 
 // Main Navigation Styling
 
-.pane-system-main-menu a:link,
-.pane-system-main-menu a:visited {
+.l-navigation a:link,
+.l-navigation a:visited {
   text-decoration: none;
   color: rgba(255,255,255,0.8);
 }
 
-.pane-system-main-menu a:hover {
+.l-navigation a:hover {
   color: rgba(255,255,255,1);
 }
 
-.pane-system-main-menu ul.menu {
+.l-navigation ul.menu {
   margin: 0;
   text-align: center;
 }
 
-.pane-system-main-menu li {
+.l-navigation li {
   list-style-type: none;
   list-style-image: none;
   display: inline-block;
