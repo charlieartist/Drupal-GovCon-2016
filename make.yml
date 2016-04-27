@@ -1,0 +1,79 @@
+api: 2
+core: 7.x
+
+includes:
+  - cod_make.yml
+
+defaults:
+  projects:
+    subdir: contrib
+
+projects:
+  drupal:
+    type: core
+    version: '7.43'
+    patch:
+      # Scale and crop image effect needs anchor option.
+      # https://www.drupal.org/node/1252606#comment-8305805
+      - https://www.drupal.org/files/issues/D7-scale-and-crop-1252606-37.patch
+
+      # Node access grants should be statically cached.
+      # https://www.drupal.org/node/2199001#comment-8495029
+      - https://www.drupal.org/files/issues/node_access_grants-static-cache-11.patch
+
+      # Invalid image style URLs should return 404, not 403.
+      # https://www.drupal.org/node/2211429#comment-10033677
+      - https://www.drupal.org/files/issues/drupal-image-style-not-found-2211429-4.patch
+
+      # Save and restore css/js/head with block cache.
+      # https://www.drupal.org/node/1460766
+      - https://www.drupal.org/files/issues/d7-block-cache-1460766-34.patch
+
+      # Ignore front end vendor folders to improve directory search performance
+      # https://www.drupal.org/node/2329453#comment-10622208
+      - https://www.drupal.org/files/issues/ignore_frontend_folders-2329453-101-7.x.patch
+
+  # For all projects, always specify the exact version that is to be used.
+  # For any project using a dev branch, always specify the revision id.
+
+  acquia_purge:
+    version: '1.3'
+  fast_404:
+    version: '1.5'
+  focal_point:
+    version: '1.0-beta6'
+  genpass:
+    version: '1.0'
+  geofield:
+    version: '2.3'
+  geophp:
+    version: '1.7'
+  honeypot:
+    version: '1.21'
+  ip_geoloc:
+    version: '1.29'
+  leaflet:
+    version: '1.3'
+  mailchimp:
+    version: '4.0'
+  panels_everywhere:
+    version: '1.0-rc2'
+  picture:
+    version: '2.13'
+  responsive_menus:
+    download:
+      type: git
+      branch: '1.x-dev'
+      revision: '1d829b177e6bc2f4bd43c3cc6a4bd976e51ded2c'
+
+libraries:
+  leaflet:
+    download:
+      type: file
+      url: https://github.com/Leaflet/Leaflet/archive/v0.7.7.zip
+    directory_name: leaflet
+  mailchimp:
+    download:
+      type: file
+      url: https://github.com/thinkshout/mailchimp-api-php/archive/v1.0.zip
+    directory_name: mailchimp

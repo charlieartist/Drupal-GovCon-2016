@@ -22,7 +22,7 @@ vagrant_public_ip: ""
 vagrant_synced_folders:
   # The first synced folder will be used for the default Drupal installation, if
   # build_makefile: is 'true'.
-  - local_path: ../docroot
+  - local_path: ../
     destination: /var/www/drupalgovcon
     type: nfs
     create: true
@@ -46,7 +46,7 @@ install_site: false
 # Settings for building a Drupal site from a makefile (if 'build_makefile:'
 # is 'true').
 drupal_major_version: 7
-drupal_core_path: "/var/www/drupalgovcon"
+drupal_core_path: "/var/www/drupalgovcon/docroot"
 drupal_domain: "{{ vagrant_hostname }}"
 drupal_site_name: "Drupal GovCon"
 drupal_install_profile: cod
@@ -109,31 +109,6 @@ apache_mods_enabled:
   - proxy.load
   - proxy_fcgi.load
 
-# Nginx hosts. Each site will get a server entry using the configuration defined
-# here. Set the 'is_php' property for document roots that contain PHP apps like
-# Drupal.
-nginx_hosts:
-  - server_name: "{{ drupal_domain }}"
-    root: "{{ drupal_core_path }}"
-    is_php: true
-
-  - server_name: "adminer.{{ vagrant_hostname }}"
-    root: "{{ adminer_install_dir }}"
-    is_php: true
-
-  - server_name: "xhprof.{{ vagrant_hostname }}"
-    root: "{{ php_xhprof_html_dir }}"
-    is_php: true
-
-  - server_name: "pimpmylog.{{ vagrant_hostname }}"
-    root: "{{ pimpmylog_install_dir }}"
-    is_php: true
-
-  - server_name: "{{ vagrant_ip }} dashboard.{{ vagrant_hostname }}"
-    root: "{{ dashboard_install_dir }}"
-
-nginx_remove_default_vhost: true
-
 # MySQL Databases and users. If build_makefile: is true, first database will
 # be used for the makefile-built site.
 mysql_databases:
@@ -157,7 +132,7 @@ installed_extras:
   # - nodejs
   - pimpmylog
   # - redis
-  # - ruby
+  - ruby
   # - selenium
   # - solr
   - varnish
@@ -175,13 +150,13 @@ nodejs_npm_global_packages: []
 
 # `ruby` must be in installed_extras for this to work.
 ruby_install_gems_user: "{{ vagrant_user }}"
-ruby_install_gems: []
+ruby_install_gems: ['bundler']
 
 # You can configure almost anything else on the server in the rest of this file.
 extra_security_enabled: false
 
-drush_version: "master"
-drush_keep_updated: true
+drush_version: "7.2.0"
+drush_keep_updated: false
 drush_composer_cli_options: "--prefer-dist --no-interaction"
 
 firewall_allowed_tcp_ports:
