@@ -70,5 +70,6 @@ function dgc_config_install() {
     'dgc_location_maps',
     'dgc_location_of_interest',
     'dgc_page_layout',
+    'dgc_navigation',
   ));
 }
