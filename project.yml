@@ -27,3 +27,7 @@ git:
     # Defining git remotes allows builds deployed via CI.
     # Only add git repositories that you would like to deploy to!
     - capitalcamp@svn-6971.prod.hosting.acquia.com:capitalcamp.git
+
+deploy:
+  branch: "develop-build"
+  commitMsg: "Automated commit by Travis CI."
