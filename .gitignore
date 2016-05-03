@@ -121,3 +121,9 @@ vendor/.git
 nbproject
 nbproject/*
 
+# Ignore the node modules folder (created by 'npm install').
+docroot/sites/all/themes/custom/govcon_2016/node_modules/*
+# Ignore CSS, will be part of the build.
+docroot/sites/all/themes/custom/govcon_2016/css/*
+# We absolutely don't want to have the .sass-cache in git.
+docroot/sites/all/themes/custom/govcon_2016/.sass-cache
