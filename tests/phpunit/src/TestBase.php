@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Test base for project PHPUnit tests.
- */
-
 namespace Drupal\Tests\PHPUnit;
 
 use Symfony\Component\Yaml\Yaml;
@@ -24,6 +19,7 @@ abstract class TestBase extends \PHPUnit_Framework_TestCase {
    * Class constructor.
    */
   public function __construct($name = NULL, array $data = array(), $data_name = '') {
+
     parent::__construct($name, $data, $data_name);
 
     $this->projectDirectory = dirname(dirname(dirname(__DIR__)));
