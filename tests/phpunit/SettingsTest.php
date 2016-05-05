@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Test configuration in settings.php.
- */
-
 namespace Drupal\Tests\PHPUnit;
 /**
  * Class SettingsTest.
@@ -12,6 +7,7 @@ namespace Drupal\Tests\PHPUnit;
  * Verifies $settings.php conf values.
  */
 class SettingsTest extends TestBase {
+
   /**
    * Sets up require parameters for tests to run.
    *
@@ -24,15 +20,15 @@ class SettingsTest extends TestBase {
     $_ENV['AH_SITE_ENVIRONMENT'] = $env;
     $_ENV['AH_SITE_NAME'] = 'capitalcamp';
     $_ENV['AH_PHPUNIT_TEST'] = TRUE;
-    // @codingStandardsIgnoreStart
-    $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
-    // @codingStandardsIgnoreEnd
+        // @codingStandardsIgnoreStart
+        $_SERVER['REMOTE_ADDR'] = '127.0.0.1';
+        // @codingStandardsIgnoreEnd
     if (!defined('DRUPAL_ROOT')) {
       define('DRUPAL_ROOT', $this->drupalRoot);
     }
 
     // Adds settings.php and make global variables accessible to this class.
-    require $this->drupalRoot . '/sites/default/settings.php';
+    include $this->drupalRoot . '/sites/default/settings.php';
 
     $this->conf = $conf;
     $this->base_url = $base_url;
@@ -205,14 +201,16 @@ class SettingsTest extends TestBase {
     $this->assertEquals($this->conf['fast_404_html'], '<html xmlns="http://www.w3.org/1999/xhtml"><head><title>404 Not Found</title></head><body><h1>Not Found</h1><p>The requested URL "@path" was not found on this server.</p></body></html>');
 
     $this->assertEquals($this->conf['fast_404_url_whitelisting'], FALSE);
-    $this->assertEquals($this->conf['fast_404_whitelist'], array(
-      'index.php',
-      'rss.xml',
-      'install.php',
-      'cron.php',
-      'update.php',
-      'xmlrpc.php',
-    ));
+    $this->assertEquals(
+          $this->conf['fast_404_whitelist'], array(
+            'index.php',
+            'rss.xml',
+            'install.php',
+            'cron.php',
+            'update.php',
+            'xmlrpc.php',
+          )
+      );
 
     $this->assertEquals($this->conf['fast_404_string_whitelisting'], array('cdn/farfuture', '/advagg_'));
 

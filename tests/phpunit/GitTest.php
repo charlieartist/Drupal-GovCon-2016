@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Test git hooks.
- */
-
 namespace Drupal\Tests\PHPUnit;
 
 /**
@@ -18,13 +13,14 @@ class GitTasksTest extends TestBase {
    * Tests Phing setup:git-hooks target.
    */
   public function testGitConfig() {
+
     $this->assertFileExists($this->projectDirectory . '/.git');
     $this->assertFileExists($this->projectDirectory . '/.git/hooks/commit-msg');
     $this->assertFileExists($this->projectDirectory . '/.git/hooks/pre-commit');
     $this->assertNotContains(
-      '${project.prefix}',
-      file_get_contents($this->projectDirectory . '/.git/hooks/commit-msg')
-    );
+          '${project.prefix}',
+          file_get_contents($this->projectDirectory . '/.git/hooks/commit-msg')
+      );
   }
 
   /**
@@ -40,6 +36,7 @@ class GitTasksTest extends TestBase {
    * @dataProvider providerTestGitHookCommitMsg
    */
   public function testGitHookCommitMsg($is_valid, $commit_message, $message = NULL) {
+
     $this->assertCommitMessageValidity($is_valid, $commit_message, $message);
   }
 
@@ -47,6 +44,7 @@ class GitTasksTest extends TestBase {
    * Data provider.
    */
   public function providerTestGitHookCommitMsg() {
+
     $prefix = $this->config['project']['prefix'];
     return array(
       array(FALSE, "This is a bad commit.", 'Missing prefix and ticket number.'),
@@ -68,6 +66,7 @@ class GitTasksTest extends TestBase {
    * Should assert that code validation via phpcs is functioning.
    */
   public function testGitPreCommitHook() {
+
     // Commits must be executed inside of new project directory.
     chdir($this->projectDirectory);
     $prefix = $this->config['project']['prefix'];
@@ -88,6 +87,7 @@ class GitTasksTest extends TestBase {
    *   The PHPUnit message to be output for this datapoint.
    */
   protected function assertCommitMessageValidity($is_valid, $commit_message, $message = '') {
+
     // Commits must be executed inside of new project directory.
     chdir($this->projectDirectory);
 

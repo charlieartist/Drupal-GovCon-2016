@@ -1,10 +1,5 @@
 <?php
 
-/**
- * @file
- * Custom Behat Step definitions.
- */
-
 namespace Drupal;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
