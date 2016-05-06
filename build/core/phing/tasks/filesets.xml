@@ -23,6 +23,7 @@
     <exclude name="**/dist/**/*"/>
     <exclude name="**/styleguide/**/*"/>
     <exclude name="**/govcon_2016/**/*"/>
+    <exclude name="**/govcon/**/*"/>
   </patternset>
 
   <fileset dir="${repo.root}" id="files.php.all">

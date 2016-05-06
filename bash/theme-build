@@ -1,0 +1,2 @@
+#!/bin/sh
+( cd sites/all/themes/custom/govcon_2016 ; npm run build )

@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Build docroot
+echo "Build docroot."
+/var/www/drupalgovcon/task.sh setup:build:all
+echo "Clear drupal caches."
+( cd /var/www/drupalgovcon/docroot && drush cc all )
+echo "Drupal database updates."
+( cd /var/www/drupalgovcon/docroot  && drush updb -y )
+echo "Drupal features reverts."
+( cd /var/www/drupalgovcon/docroot  && drush fra -y )
