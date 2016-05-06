@@ -8,7 +8,8 @@
  * Implements hook_install().
  */
 function dgc_deploy_prod_install() {
-  // Disable devel, devel_generate and dblog modules. Enable syslog, memcache and security_review modules.
+  // Disable devel, devel_generate and dblog modules.
+  // Enable syslog, memcache and security_review modules.
   module_disable(array('devel', 'devel_generate', 'dblog'));
   module_enable(array('syslog', 'memcache'));
   // Set initial variable values.
@@ -20,7 +21,7 @@ function dgc_deploy_prod_install() {
 }
 
 /**
- * Implement hook_uninstall().
+ * Implements hook_uninstall().
  */
 function dgc_deploy_prod_uninstall() {
   // Disable production-only type modules.

@@ -12,29 +12,41 @@ function dgc_deploy_update_7000() {
 }
 
 /**
- * Improve usability of registration and login actions with logintoboggan module.
+ * Enable logintoboggan.
+ *
+ * Improve usability of registration and login actions
+ * with logintoboggan module.
  */
 function dgc_deploy_update_7001() {
   module_enable(array('logintoboggan'));
 }
 
 /**
- * Improve user registration with external sources via hybridauth social login module.
+ * Enable hybridauth.
+ *
+ * Improve user registration with external sources via
+ * hybridauth social login module.
  */
 function dgc_deploy_update_7002() {
   module_enable(array('hybridauth'));
 }
 
 /**
- * Disable hybridauth for now due to complexity of using it with external services
- * needing to register for each.
+ * Disable hybridauth.
+ *
+ * Disable hybridauth for now due to complexity of using
+ * it with external services needing to register for each.
  */
 function dgc_deploy_update_7003() {
   module_disable(array('hybridauth'));
 }
 
 /**
- * Enable responsive_dropdown_menus module and govcon theme. Set theme as default. Add responsive main menu block to navigation region. Add log in, logout, my account and register links to main menu.
+ * Enable responsive_dropdown_menus module and govcon theme.
+ *
+ * Set theme as default. Add responsive main menu block to
+ * navigation region. Add log in, logout, my account and register
+ * links to main menu.
  */
 function dgc_deploy_update_7004() {
   module_enable(array('responsive_dropdown_menus'));
@@ -111,7 +123,10 @@ function dgc_deploy_update_7006() {
 }
 
 /**
- * Set site_frontpage. Redirect front to 2015 event page. Redirect user/register to event registration page.
+ * Set site_frontpage.
+ *
+ * Redirect front to 2015 event page. Redirect user/register to
+ * event registration page.
  */
 function dgc_deploy_update_7007() {
   variable_set('site_frontpage', 'node');

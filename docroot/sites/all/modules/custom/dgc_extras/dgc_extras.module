@@ -6,7 +6,6 @@
 
 include_once 'dgc_extras.features.inc';
 
-
 /**
  * Implements hook_date_formats().
  */

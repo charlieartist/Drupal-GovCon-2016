@@ -8,6 +8,7 @@ include_once 'dgc_deploy.features.inc';
 
 /**
  * Implements hook_mollom_form_list().
+ *
  * Make ticket registration form available to Mollom.
  */
 function dgc_deploy_mollom_form_list() {
@@ -16,8 +17,10 @@ function dgc_deploy_mollom_form_list() {
   );
   return $forms;
 }
+
 /**
  * Implements hook_mollom_form_info().
+ *
  * Enable CAPTCHA mode for ticket registration form.
  */
 function dgc_deploy_mollom_form_info() {
