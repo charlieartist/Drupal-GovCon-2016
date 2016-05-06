@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Sync local db from dev.
+drush sql-sync --create-db @drupalgovcon.dev @drupalgovcon.local.drupalgovcon.org

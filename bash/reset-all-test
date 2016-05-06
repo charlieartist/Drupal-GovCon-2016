@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Build docroot
+echo "Build docroot."
+/var/www/drupalgovcon/task.sh setup:build:all
+echo "Sync database with test."
+( cd /var/www/drupalgovcon/docroot && drush sql-sync --create-db @drupalgovcon.test @drupalgovcon.local.drupalgovcon.org -y)
+echo "Clear drupal caches."
+( cd /var/www/drupalgovcon/docroot && drush cc all )
+echo "Drupal database updates."
+( cd /var/www/drupalgovcon/docroot  && drush updb -y )
+echo "Drupal features reverts."
+( cd /var/www/drupalgovcon/docroot  && drush fra -y )
+echo "Drupal disable css and js aggregation"
+( cd /var/www/drupalgovcon/docroot  && drush vset preprocess_css 0 --yes && drush vset preprocess_js 0 --yes )
+echo "Enable stage file proxy."
+( cd /var/www/drupalgovcon/docroot && drush en -y stage_file_proxy devel devel_generate)
+echo "Drupal log in."
+( cd /var/www/drupalgovcon/docroot && drush uli -l local.drupalgovcon.org )

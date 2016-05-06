@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Clear cache
+drush cc all
+
+# Updb
+drush updb -y
+
+# Revert features
+drush fra -y
+
+# Enable stage_file_proxy
+drush en -y stage_file_proxy
+
+# Enable devel
+drush en -y devel devel_generate
