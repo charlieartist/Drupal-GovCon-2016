@@ -68,6 +68,8 @@ projects:
     version: '1.5'
   memcache:
     version: '1.5'
+  menu_item_visibility:
+    version: '1.0-beta1'
   modernizr:
     version: '3.9'
   leaflet:
