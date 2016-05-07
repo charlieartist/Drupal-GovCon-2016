@@ -33,7 +33,7 @@ $protocol = 'http://';
 if ($ah_env) {
   switch ($_ENV['AH_SITE_ENVIRONMENT']) {
     case 'prod':
-      $domain = "drupalgovcon.org";
+      $domain = "www.drupalgovcon.org";
       $protocol = 'https://';
     default:
       // Dynamically set base url based on Acquia environment variable.
