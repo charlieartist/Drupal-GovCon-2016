@@ -42,7 +42,7 @@ class SettingsTest extends TestBase {
     $this->setupParams('prod');
 
     // Base_url.
-    $this->assertContains($this->getExpectedBaseUrl($_ENV['AH_SITE_NAME']), $this->base_url);
+    $this->assertContains('https://www.drupalgovcon.org', $this->base_url);
 
     // Assert cache.settings.php.
     $this->assertEquals(TRUE, $this->conf['cache']);
@@ -176,7 +176,7 @@ class SettingsTest extends TestBase {
       && strstr($_ENV['ACQUIA_HOSTING_DRUPAL_LOG'], 'free'));
     $domain_prefix = $is_ah_free_tier ? 'devcloud' : 'prod';
     $domain = "$site_name.$domain_prefix.acquia-sites.com";
-    $protocol = 'http://';
+    $protocol = 'https://';
 
     return $protocol . $domain;
   }
