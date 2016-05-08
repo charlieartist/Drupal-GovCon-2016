@@ -176,7 +176,7 @@ class SettingsTest extends TestBase {
       && strstr($_ENV['ACQUIA_HOSTING_DRUPAL_LOG'], 'free'));
     $domain_prefix = $is_ah_free_tier ? 'devcloud' : 'prod';
     $domain = "$site_name.$domain_prefix.acquia-sites.com";
-    $protocol = 'http://';
+    $protocol = 'https://';
 
     return $protocol . $domain;
   }
