@@ -42,7 +42,7 @@ class SettingsTest extends TestBase {
     $this->setupParams('prod');
 
     // Base_url.
-    $this->assertContains($this->getExpectedBaseUrl($_ENV['AH_SITE_NAME']), $this->base_url);
+    $this->assertContains('https://www.drupalgovcon.org', $this->base_url);
 
     // Assert cache.settings.php.
     $this->assertEquals(TRUE, $this->conf['cache']);
