@@ -3,7 +3,7 @@
   "license": "proprietary",
   "require": {
     "drush/drush":                  "7.*",
-    "hirak/prestissimo": "^0.1.9"
+    "hirak/prestissimo": "^0.2.3"
   },
   "require-dev": {
     "behat/behat":                  "3.0.*",
