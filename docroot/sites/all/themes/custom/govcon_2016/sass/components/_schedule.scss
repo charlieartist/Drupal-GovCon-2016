@@ -43,12 +43,15 @@
     }
   }
   .quicktabs-views-group {
-    position: relative;
+    position: relative;  // Turned off to test. This will need to be the container for the elements here.
+    //@include clearfix; // Added test
+    //background: rgba(255,0,0,0.2); // Added test
   }
   .views-field-field-slot-datetime-1,
   .views-field-field-evttime-date-1 {
     border-radius: 0;
     padding: 0 0 0 210px;
+    //display: inline-block; // Added Test, cuts background bar to width of text.
     text-align: left;
     height: 50px;
     line-height: 50px;
@@ -56,11 +59,12 @@
     font-family: $serif;
     background-color: $green;
     background-image: $texture;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.7); // Final
+    color: #0f0;
   }
   .views-field-field-slot-datetime-2,
   .views-field-field-evttime-date-2 {
-    //position: absolute;
+    position: absolute; // Turned off to test. If turned off, many display issues are resolved.
     top: 0;
     left: 0;
     height: 50px;
@@ -69,6 +73,7 @@
     font-weight: 400;
     width: 200px;
     color: #fff;
+    color: #f00; // Test color
     padding: 0 10px;
   }
   .view-cod-schedule-content .views-row,
@@ -109,7 +114,7 @@
   .track-icon-21 { color: rgba( $green, 1); background: url(/sites/all/themes/custom/govcon_2016/img/gc-trackicon-business.svg) no-repeat; background-size: 35%; background-position: 50% 20%;}
   .track-icon-26 { color: rgba( $green, 1); background: url(/sites/all/themes/custom/govcon_2016/img/gc-trackicon-sitebuilding.svg) no-repeat; background-size: 35%; background-position: 50% 20%;}
   .track-icon-16 { color: rgba( $green, 1); background: url(/sites/all/themes/custom/govcon_2016/img/gc-trackicon-keynote.svg) no-repeat; background-size: 35%; background-position: 50% 20%;}
-  .track-icon-1 { color: rgba( $green, 1); background: url(/sites/all/themes/custom/govcon_2016/img/gc-trackicon-theming.svg) no-repeat; background-size: 35%; background-position: 50% 20%;}
+  .track-icon-1 { color: rgba( $green, 1); background: url(/sites/all/themes/custom/govcon_2016/img/gc-trackicon-training.svg) no-repeat; background-size: 35%; background-position: 50% 20%;}
   .views-field-title {
     margin: 4px 0 2px 0;
     @include breakpoint($desk) {
