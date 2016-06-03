@@ -44,37 +44,65 @@
   }
   .quicktabs-views-group {
     position: relative;  // Turned off to test. This will need to be the container for the elements here.
-    //@include clearfix; // Added test
+    @include clearfix; // Added test
     //background: rgba(255,0,0,0.2); // Added test
+    border-top: 3px solid $green;
+    //border-bottom: 3px solid #00f;
+    //background: none; /* For browsers that do not support gradients */
+    //background: -webkit-linear-gradient($green, rgba(255,255,255,0)); /* For Safari 5.1 to 6.0 */
+    //background: -o-linear-gradient($green, rgba(255,255,255,0)); /* For Opera 11.1 to 12.0 */
+    //background: -moz-linear-gradient($green, rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+    //background: linear-gradient($green, rgba(255,255,255,0)); /* Standard syntax */
+    background: -webkit-linear-gradient($green, $green 3em, rgba(255,255,255,0) 3em, rgba(255,255,255,0) 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient($green, $green 3em, rgba(255,255,255,0) 3em, rgba(255,255,255,0) 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient($green, $green 3em, rgba(255,255,255,0) 3em, rgba(255,255,255,0) 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient($green, $green 3em, rgba(255,255,255,0) 3em, rgba(255,255,255,0) 100%); /* Standard syntax */
   }
+
+  .quicktabs-views-group:nth-child(even) {
+    //border-top: 3px solid #000;
+    //border-bottom: 3px solid #0f0;
+    //background: rgba(255,0,0,0.2);
+  }
+
+  // This styles the day of the week
   .views-field-field-slot-datetime-1,
   .views-field-field-evttime-date-1 {
     border-radius: 0;
-    padding: 0 0 0 210px;
-    //display: inline-block; // Added Test, cuts background bar to width of text.
+    //padding: 0 0 0 210px; // Original
+    padding: 0.5em 0.25em 0.5em 0.25em; // Added
+    display: inline-block; // Added Test, cuts background bar to width of text.
     text-align: left;
-    height: 50px;
-    line-height: 50px;
+    width: 160px; // Added
+    //height: 50px; // Original
+    //line-height: 50px;  // Original
     font-size: 1.2em;
     font-family: $serif;
-    background-color: $green;
-    background-image: $texture;
+    //background-color: $green;  // Original
+    background-color: none; // Added
+    background: none; // Added to override default styling
+    //background-image: $texture;
     color: rgba(255,255,255,0.7); // Final
-    color: #0f0;
+    //color: #0f0; // Added test
   }
+  // This styles the times
   .views-field-field-slot-datetime-2,
   .views-field-field-evttime-date-2 {
-    position: absolute; // Turned off to test. If turned off, many display issues are resolved.
-    top: 0;
-    left: 0;
-    height: 50px;
-    line-height: 50px;
+    //position: absolute; // Original-Turned off to test. If turned off, many display issues are resolved.
+    //top: 0;  // Original
+    //left: 0;  // Original
+    //height: 50px; // Original
+    //line-height: 50px; // Original
+    display: inline-block; // Added
     font-size: 1.2em;
     font-weight: 400;
-    width: 200px;
+    width: 200px; // Original 
     color: #fff;
-    color: #f00; // Test color
-    padding: 0 10px;
+    background-color: $green;  // Added
+    background-color: none; // Added
+    //color: #f00; // Test color
+    padding: 0 10px; // Original
+    padding: 0.5em 0.25em 0.5em 0.25em; // Added
   }
   .view-cod-schedule-content .views-row,
   .view-dgc-my-schedule-content .views-row {
