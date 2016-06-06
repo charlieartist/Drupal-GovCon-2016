@@ -10,7 +10,6 @@
       border-radius: 0;
       background: none;
       padding: 0;
-      //margin-bottom: 40px; // Original
       margin-bottom: 1em;
       a {
         @extend a.button.btn-big;
@@ -32,8 +31,8 @@
     }
   }
   .quicktabs-views-group {
-    position: relative;  // Turned off to test. This will need to be the container for the elements here.
-    @include clearfix; // Added test
+    position: relative;  // Added
+    @include clearfix; // Added
     border-top: 3px solid $green;
     //border-bottom: 3px solid #00f;    //background: none; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient($green, $green 3em, rgba(255,255,255,0) 3em, rgba(255,255,255,0) 100%); /* For Safari 5.1 to 6.0 */
@@ -54,7 +53,6 @@
     font-family: $serif;
     background-color: none; // Added
     background: none; // Added to override default styling
-    //background-image: $texture;
     color: rgba(255,255,255,0.7); // Final
   }
   // This styles the times
@@ -158,8 +156,6 @@
 
   // Added to style title
   .view-cod-schedule .views-field-title {
-    //display: inline-block;
-    //float: left;
     font-size: 1.6em;
   }
 
